@@ -1,0 +1,18 @@
+workspace/
+bin/
+*.tmp
+*.bak
+*.swp
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Maven
+target/
+
+.tern-project
+
+#Mac
+.DS_Store

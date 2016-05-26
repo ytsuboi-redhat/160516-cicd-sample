@@ -1,0 +1,5 @@
+# file: roles/postgresql/install/defaults/main.yml
+
+dbuser: "cicd_sandbox"
+dbpass: "cicd_sandbox"
+dbname: "cicd_sandbox"

@@ -1,0 +1,10 @@
+# file: roles/selinux/permissive/tasks/main.yml
+
+- name: install libselinux-python
+  yum: name=libselinux-python
+  become: yes
+  become_user: root
+- name: permissive selinux
+  selinux: policy=targeted state=permissive
+  become: true
+  become_user: root

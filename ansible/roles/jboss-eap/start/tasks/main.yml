@@ -1,0 +1,4 @@
+# file: roles/jboss-eap/start/tasks/main.yml
+
+- name: start JBoss EAP service
+  service: name=jboss-eap state=started

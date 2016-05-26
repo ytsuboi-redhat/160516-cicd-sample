@@ -1,0 +1,9 @@
+# file: jenkinsservers.yml
+- hosts: jenkinsservers
+  roles:
+    - { role: selinux/permissive, tags: ["selinux/permissive"] }
+    - { role: firewalld/stop, tags: ["firewalld/stop"] }
+    - { role: git/install, tags: ["git/install"] }
+    - { role: openjdk/install, tags: ["openjdk/install"] }
+    - { role: maven/install, tags: ["maven/install"] }
+    - { role: jenkins/install, tags: ["jenkins/install"] }

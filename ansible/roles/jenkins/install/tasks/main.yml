@@ -1,0 +1,20 @@
+# file: roles/jenkins/install/tasks/main.yml
+
+- name: stop Jenkins, if running
+  service: name={{ package_name }} state=stopped
+  ignore_errors: true
+
+- name: import Jenkins GPG Key
+  rpm_key: key={{ key_url }}
+
+- name: install Jenkins Yum Repository
+  get_url: url={{ repo_url }} dest=/etc/yum.repos.d/jenkins.repo
+
+- name: install Jenkins
+  yum: name={{ package_name }}
+
+- name: set JENKINS_PORT in /etc/sysconfig/jenkins
+  replace: dest=/etc/sysconfig/jenkins regexp='^JENKINS_PORT="8080"' replace='JENKINS_PORT="28080"' backup=yes
+
+#- name: start Jenkins
+#  service: name={{ package_name }} state=started

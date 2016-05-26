@@ -1,0 +1,62 @@
+# file: roles/postgresql/install/tasks/main.yml
+
+# stop if running
+- name: stop if running
+  service: name=postgresql state=stopped
+  become: yes
+  become_user: root
+# remove Data directory if exists
+- name: remove Data directory if exists
+  shell: rm -rf /var/lib/pgsql/data
+  become: yes
+  become_user: root
+# install postgresql
+- name: install postgresql
+  yum: name={{ item }}
+  with_items:
+    - postgresql
+    - postgresql-server
+    - postgresql-libs
+    - postgresql-contrib
+    - python-psycopg2
+  become: yes
+  become_user: root
+# initdb
+- name: initdb
+  shell: postgresql-setup initdb
+  become: yes
+  become_user: root
+# copy pg_hba.conf
+- name: copy pg_hba.conf
+  copy: src=pg_hba.conf dest=/var/lib/pgsql/data/pg_hba.conf group=postgres owner=postgres mode="u+rw,g-rwx,o-rwx"
+  become: yes
+  become_user: root
+# copy postgresql.conf
+- name: copy postgresql.conf
+  copy: src=postgresql.conf dest=/var/lib/pgsql/data/postgresql.conf group=postgres owner=postgres mode="u+rw,g-rwx,o-rwx"
+  become: yes
+  become_user: root
+# start
+- name: start
+  service: name=postgresql state=started  enabled=yes
+  become: yes
+  become_user: root
+# create database
+- name: create database
+  postgresql_db:
+    name: "{{ dbname }}"
+    encoding: "UTF-8"
+    login_user: postgres
+  become: yes
+  become_user: postgres
+# create user
+- name: create user
+  postgresql_user:
+    db: "{{ dbname }}"
+    name: "{{ dbuser }}"
+    password: "{{ dbpass }}"
+    priv: ALL
+    state: present
+    login_user: postgres
+  become: yes
+  become_user: postgres

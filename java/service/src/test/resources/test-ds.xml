@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema http://docs.jboss.org/ironjacamar/schema/datasources_1_0.xsd">
+	<!-- The datasource is bound into JNDI at this location. We reference this
+		in META-INF/persistence.xml -->
+	<datasource jndi-name="java:jboss/datasources/CoeCicdSandboxDS"
+		pool-name="CoeCicdSandboxDS" enabled="true" use-java-context="true">
+		<connection-url>jdbc:postgresql://192.168.56.102:5432/coe_cicd</connection-url>
+		<driver-class>org.postgresql.Driver</driver-class>
+		<driver>postgresql-jdbc4</driver>
+		<pool>
+			<min-pool-size>2</min-pool-size>
+			<max-pool-size>20</max-pool-size>
+			<prefill>true</prefill>
+		</pool>
+		<security>
+			<user-name>coe_cicd</user-name>
+			<password>coe_cicd</password>
+		</security>
+		<validation>
+			<check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
+			<validate-on-match>false</validate-on-match>
+			<background-validation>false</background-validation>
+			<use-fast-fail>false</use-fast-fail>
+		</validation>
+	</datasource>
+</datasources>

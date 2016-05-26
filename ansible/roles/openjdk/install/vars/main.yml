@@ -1,0 +1,3 @@
+# file: roles/openjdk/install/vars/main.yml
+
+openjdk_version: 1.8.0

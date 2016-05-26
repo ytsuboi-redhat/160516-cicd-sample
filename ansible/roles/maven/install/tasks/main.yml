@@ -1,0 +1,16 @@
+# file: roles/maven/install/tasks/main.yml
+
+- name: create Apache Maven installation directory
+  file: path={{ maven_install_dir }} owner=root group=root state=directory
+
+- name: unarchive Apache Maven binary file
+  unarchive: src={{ maven_archive }} dest={{ maven_install_dir }}
+
+- name: remove Apache Maven home directory, if exists
+  file: path={{ maven_home_dir }} state=absent
+
+- name: rename Apache Maven home directory
+  command: mv chdir={{ maven_install_dir }} {{ maven_extracted_dir }} {{ maven_version }}
+
+- name: set MAVEN_HOME in /etc/profile.d/maven.sh
+  template: src=maven.sh dest=/etc/profile.d mode=u=rw,g=r,o=r

@@ -1,0 +1,4 @@
+# file: roles/openjdk/install/tasks/main.yml
+
+- name: install Open JDK
+  yum: name=java-{{ openjdk_version }}-openjdk-devel state=present

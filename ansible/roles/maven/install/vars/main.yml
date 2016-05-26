@@ -1,0 +1,7 @@
+# file: roles/maven/install/vars/main.yml
+
+maven_version: 3.3.9
+maven_install_dir: "/opt/maven"
+maven_archive: "apache-maven-{{ maven_version }}-bin.tar.gz"
+maven_extracted_dir: "apache-maven-{{ maven_version }}"
+maven_home_dir: "{{ maven_install_dir }}/{{ maven_version }}"

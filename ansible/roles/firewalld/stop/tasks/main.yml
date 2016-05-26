@@ -1,0 +1,5 @@
+# file: roles/firewalld/stop/tasks/main.yml
+
+- name: stop firewalld
+  service: name=firewalld state=stopped
+  sudo: yes

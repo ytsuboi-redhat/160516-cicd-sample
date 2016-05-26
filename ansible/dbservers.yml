@@ -1,0 +1,6 @@
+# file: postgresql.yml
+- hosts: dbservers
+  roles:
+    - { role: selinux/permissive, tags: ["selinux/permissive"] }
+    - { role: firewalld/stop, tags: ["firewalld/stop"] }
+    - { role: postgresql/install, tags: ["postgresql/install"] }

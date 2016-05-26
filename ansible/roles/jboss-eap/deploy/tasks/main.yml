@@ -1,0 +1,4 @@
+# file: roles/jboss-eap/deploy/tasks/main.yml
+
+- name: deploy application to JBoss EAP
+  command: 'cp {{ jenkins_build_ear }} {{ eap_home }}/{{ deployment_dir }}'

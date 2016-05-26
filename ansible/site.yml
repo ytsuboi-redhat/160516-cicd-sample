@@ -1,0 +1,3 @@
+# file: site.yml
+ - include: eapservers.yml
+ - include: dbservers.yml

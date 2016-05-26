@@ -1,0 +1,6 @@
+# file: roles/jenkins/install/vars/main.yml
+
+key_url: http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+repo_url: http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+#repo_url: http://pkg.jenkins-ci.org/redhat/jenkins.repo
+package_name: jenkins

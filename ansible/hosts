@@ -1,0 +1,8 @@
+[servers]
+192.168.56.102
+[eapservers]
+192.168.56.102
+[jenkinsservers]
+192.168.56.102
+[dbservers]
+192.168.56.102
