@@ -1,9 +1,9 @@
 kv_store:
-  - id: 1
+  - id: 90000001
     key: key1
     value: value1
     modified: 2016-05-24 12:00:00
-  - id: 2
+  - id: 90000002
     key: key2
     value: value2
     modified: 2016-05-24 13:00:00

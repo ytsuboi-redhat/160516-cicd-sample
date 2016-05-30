@@ -52,7 +52,7 @@ public class OperationLogDaoBeanArqTestIT {
                 .createQuery("select opl from OperationLog opl")
                 .getResultList();
         assertThat(2, is(list.size()));
-        assertThat(1L, is(list.get(0).getId()));
+        assertThat(90000001L, is(list.get(0).getId()));
         assertThat("ope1", is(list.get(0).getOperation()));
         assertThat(sdf.parse("2016-05-30 12:00:00"),
                 is(list.get(0).getOperated()));

@@ -24,8 +24,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import cicd.sandbox.dao.KvStoreDao;
-import cicd.sandbox.dao.KvStoreDaoBean;
 import cicd.sandbox.entity.jpa.KeyValueStore;
 import cicd.sandbox.exception.TargetNotFoundException;
 
@@ -64,7 +62,7 @@ public class KvStoreDaoBeanArqTestIT {
                 .createQuery("select kvs from KeyValueStore kvs")
                 .getResultList();
         assertThat(2, is(list.size()));
-        assertThat(1L, is(list.get(0).getId()));
+        assertThat(90000001L, is(list.get(0).getId()));
         assertThat("key1", is(list.get(0).getKey()));
         assertThat("value1", is(list.get(0).getValue()));
         assertThat(sdf.parse("2016-05-24 12:00:00"),
@@ -109,7 +107,7 @@ public class KvStoreDaoBeanArqTestIT {
                 .createQuery("select kvs from KeyValueStore kvs")
                 .getResultList();
         assertThat(1, is(list.size()));
-        assertThat(2L, is(list.get(0).getId()));
+        assertThat(90000002L, is(list.get(0).getId()));
         assertThat("イエロー", is(list.get(0).getKey()));
         assertThat("黄色", is(list.get(0).getValue()));
         assertThat(sdf.parse("2016-05-31 00:00:01"),
