@@ -74,7 +74,7 @@ public class KvStoreDaoBeanArqTestIT {
     @Test
     @UsingDataSet("datasets/KvStoreDaoBeanArqTestIT/case002_update_init.yml")
     public void test_update() {
-        KeyValueStore entity = entityManager.find(KeyValueStore.class, 1L);
+        KeyValueStore entity = entityManager.find(KeyValueStore.class, 90000001L);
         long prevId = entity.getId();
         Date prevModified = entity.getModified();
         entity.setKey("key更新");
@@ -98,7 +98,7 @@ public class KvStoreDaoBeanArqTestIT {
     @UsingDataSet("datasets/KvStoreDaoBeanArqTestIT/case003_remove_init.yml")
     public void test_remove() throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        KeyValueStore entity = entityManager.find(KeyValueStore.class, 1L);
+        KeyValueStore entity = entityManager.find(KeyValueStore.class, 90000001L);
         kvStoreDao.remove(entity);
         entityManager.flush();
 
