@@ -1,5 +1,5 @@
 # file: roles/jboss-eap/deploy/vars/main.yml
 
-jenkins_build_ear: '/var/lib/jenkins/jobs/結合テスト/lastSuccessful/com.kddi.coe.cicd$ear/archive/com.kddi.coe.cicd/ear/1605-PoC-SNAPSHOT/ear-1605-PoC-SNAPSHOT.ear'
+jenkins_build_ear: '/var/lib/jenkins/jobs/ビルド/lastSuccessful/com.kddi.coe.cicd$ear/archive/com.kddi.coe.cicd/ear/1605-PoC-SNAPSHOT/ear-1605-PoC-SNAPSHOT.ear'
 eap_home: /opt/jboss-eap/7.0.0.GA
 deployment_dir: standalone/deployments
