@@ -1,4 +1,4 @@
 # file: roles/jboss-eap/deploy/tasks/main.yml
 
 - name: deploy application to JBoss EAP
-  jboss: src="{{ jenkins_build_ear_dir }}" deployment={{ ear }} deploy_path="{{ eap_home }}/{{ deployment_dir }}"
+  command: jboss-cli.sh --connect --command="deploy {{ jenkins_build_ear_dir }}/{{ ear }}"
