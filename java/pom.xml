@@ -116,6 +116,7 @@
 	<!-- ================================================================== -->
 	<modules>
 		<module>entity</module>
+		<module>dao</module>
 		<module>service</module>
 		<module>web</module>
 		<module>ear</module>

@@ -12,38 +12,32 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 
 /**
  * @author <a href="mailto:ytsuboi@redhat.com">Yosuke TSUBOI</a>
- * @since 2016/05/20
+ * @since 2016/05/30
  */
 @Entity
-@Table(name = "kv_store", uniqueConstraints = @UniqueConstraint(columnNames = {
-        "key" }))
-public class KeyValueStore implements Serializable {
+@Table(name = "operation_log")
+public class OperationLog implements Serializable {
 
     // ---------------------------------------------------- Instance Variables
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "kv_store_seq_gen")
-    @SequenceGenerator(name = "kv_store_seq_gen", sequenceName = "kv_store_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "operation_log_seq_gen")
+    @SequenceGenerator(name = "operation_log_seq_gen", sequenceName = "operation_log_seq")
     @Column(name = "ID", nullable = false)
     private long id;
 
     @NotNull
     @Column
-    private String key;
-
-    @NotNull
-    @Column
-    private String value;
+    private String operation;
 
     @NotNull
     @Column
     @Temporal(TemporalType.TIMESTAMP)
-    private Date modified;
+    private Date operated;
 
     // ------------------------------------------------------------- Accessors
 
@@ -55,28 +49,19 @@ public class KeyValueStore implements Serializable {
         this.id = id;
     }
 
-    public String getKey() {
-        return key;
+    public String getOperation() {
+        return operation;
     }
 
-    public void setKey(String key) {
-        this.key = key;
+    public void setOperation(String operation) {
+        this.operation = operation;
     }
 
-    public String getValue() {
-        return value;
+    public Date getOperated() {
+        return operated;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setOperated(Date operated) {
+        this.operated = operated;
     }
-
-    public Date getModified() {
-        return modified;
-    }
-
-    public void setModified(Date modified) {
-        this.modified = modified;
-    }
-
 }

@@ -1,18 +1,12 @@
 package cicd.sandbox.service;
 
-import java.util.Date;
-
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
+import javax.inject.Inject;
 
+import cicd.sandbox.dao.KvStoreDao;
+import cicd.sandbox.dao.OperationLogDao;
 import cicd.sandbox.entity.jpa.KeyValueStore;
-import cicd.sandbox.service.exception.NotFoundException;
+import cicd.sandbox.entity.jpa.OperationLog;
 
 /**
  * @author <a href="mailto:ytsuboi@redhat.com">Yosuke TSUBOI</a>
@@ -21,53 +15,42 @@ import cicd.sandbox.service.exception.NotFoundException;
 @Stateless
 public class SandboxServiceBean implements SandboxService {
 
-    @PersistenceContext(unitName = "CicdSandboxPU")
-    private EntityManager entityManager;
+    @Inject
+    private KvStoreDao kvStoreDao;
+
+    @Inject
+    private OperationLogDao operationLogDao;
 
     @Override
     public KeyValueStore find(String key) {
-        try {
-            CriteriaBuilder criteriaBuilder = entityManager
-                    .getCriteriaBuilder();
-            CriteriaQuery<KeyValueStore> criteriaQuery = criteriaBuilder
-                    .createQuery(KeyValueStore.class);
-
-            Root<KeyValueStore> root = criteriaQuery.from(KeyValueStore.class);
-            criteriaQuery.select(root)
-                    .where(criteriaBuilder.equal(root.get("key"), key));
-
-            TypedQuery<KeyValueStore> typedQuery = entityManager
-                    .createQuery(criteriaQuery);
-            return typedQuery.getSingleResult();
-        } catch (NoResultException e) {
-            throw new NotFoundException();
-        }
+        return kvStoreDao.find(key);
     }
 
     @Override
     public void create(KeyValueStore entity) {
-        entity.setModified(new Date());
-        entityManager.persist(entity);
+        createOperationLog(entity.getKey(), "created");
+        kvStoreDao.create(entity);
     }
 
     @Override
     public void update(KeyValueStore entity) {
-        KeyValueStore persisted = find(entity.getKey());
-        if (persisted == null) {
-            throw new NotFoundException();
-        }
+        createOperationLog(entity.getKey(), "updated");
+        KeyValueStore persisted = kvStoreDao.find(entity.getKey());
         persisted.setValue(entity.getValue());
-        persisted.setModified(new Date());
-        entityManager.merge(persisted);
+        kvStoreDao.update(persisted);
     }
 
     @Override
     public void remove(String key) {
-        KeyValueStore entity = find(key);
-        if (entity == null) {
-            throw new NotFoundException();
-        }
-        entityManager.remove(entity);
+        createOperationLog(key, "removed");
+        KeyValueStore entity = kvStoreDao.find(key);
+        kvStoreDao.remove(entity);
+    }
+
+    private void createOperationLog(String key, String operation) {
+        OperationLog entity = new OperationLog();
+        entity.setOperation("KeyValueStore[" + key + "] " + operation);
+        operationLogDao.create(entity);
     }
 
 }

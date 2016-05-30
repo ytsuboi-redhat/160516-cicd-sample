@@ -38,6 +38,11 @@
 						</ejbModule>
 						<ejbModule>
 							<groupId>${project.groupId}</groupId>
+							<artifactId>dao</artifactId>
+							<bundleDir>/</bundleDir>
+						</ejbModule>
+						<ejbModule>
+							<groupId>${project.groupId}</groupId>
 							<artifactId>service</artifactId>
 							<bundleDir>/</bundleDir>
 						</ejbModule>
@@ -66,6 +71,12 @@
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>entity</artifactId>
+			<version>${project.version}</version>
+			<type>ejb</type>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>dao</artifactId>
 			<version>${project.version}</version>
 			<type>ejb</type>
 		</dependency>

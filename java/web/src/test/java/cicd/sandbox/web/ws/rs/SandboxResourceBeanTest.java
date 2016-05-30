@@ -15,7 +15,6 @@ import org.mockito.Mockito;
 
 import cicd.sandbox.entity.jpa.KeyValueStore;
 import cicd.sandbox.service.SandboxService;
-import cicd.sandbox.web.ws.rs.SandboxResourceBean;
 
 /**
  * @author <a href="mailto:ytsuboi@redhat.com">Yosuke TSUBOI</a>

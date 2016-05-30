@@ -7,7 +7,7 @@
 		<version>0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	<artifactId>service</artifactId>
+	<artifactId>dao</artifactId>
 	<name>CI/CD Sandbox - ${project.artifactId}</name>
 	<!-- ================================================================== -->
 	<!-- Properties -->
@@ -66,7 +66,7 @@
 		<!-- ============================================================= -->
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>dao</artifactId>
+			<artifactId>entity</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

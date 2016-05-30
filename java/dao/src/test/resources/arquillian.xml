@@ -17,5 +17,5 @@
 		<property name="defaultDataSource">java:jboss/datasources/CicdSandboxDS</property>
 		<property name="defaultDataSeedStrategy">CLEAN_INSERT</property>
 	</extension>
-	
+
 </arquillian>
