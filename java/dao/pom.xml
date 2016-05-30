@@ -77,9 +77,7 @@
 	<profiles>
 		<profile>
 			<id>default</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
+			<!-- <activation> <activeByDefault>true</activeByDefault> </activation> -->
 			<build>
 				<plugins>
 					<plugin>
@@ -101,8 +99,19 @@
 			<build>
 				<plugins>
 					<plugin>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<skipTests>true</skipTests>
+						</configuration>
+					</plugin>
+					<plugin>
 						<artifactId>maven-failsafe-plugin</artifactId>
 						<version>${version.maven.failsafe.plugin}</version>
+						<configuration>
+							<includes>
+								<include>**/*IT.java</include>
+							</includes>
+						</configuration>
 						<executions>
 							<execution>
 								<goals>
@@ -128,10 +137,23 @@
 			<build>
 				<plugins>
 					<plugin>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<skipTests>true</skipTests>
+						</configuration>
+					</plugin>
+					<plugin>
 						<artifactId>maven-failsafe-plugin</artifactId>
 						<version>${version.maven.failsafe.plugin}</version>
+						<configuration>
+							<includes>
+								<include>**/*IT.java</include>
+							</includes>
+						</configuration>
 						<executions>
 							<execution>
+								<id>failsafe-integration-tests</id>
+								<phase>integration-test</phase>
 								<goals>
 									<goal>integration-test</goal>
 									<goal>verify</goal>

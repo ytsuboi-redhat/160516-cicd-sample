@@ -101,6 +101,12 @@
 			<build>
 				<plugins>
 					<plugin>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<skipTests>true</skipTests>
+						</configuration>
+					</plugin>
+					<plugin>
 						<artifactId>maven-failsafe-plugin</artifactId>
 						<version>${version.maven.failsafe.plugin}</version>
 						<executions>
@@ -127,6 +133,12 @@
 			</dependencies>
 			<build>
 				<plugins>
+					<plugin>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<skipTests>true</skipTests>
+						</configuration>
+					</plugin>
 					<plugin>
 						<artifactId>maven-failsafe-plugin</artifactId>
 						<version>${version.maven.failsafe.plugin}</version>
