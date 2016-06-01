@@ -1,4 +1,4 @@
 # file: roles/jboss-eap/deploy/vars/main.yml
 
 eap_home: /opt/jboss-eap/7.0.0.GA
-jenkins_build_ear: /var/lib/jenkins/jobs/ビルド/lastSuccessful/cicd.sandbox\$ear/archive/cicd.sandbox/ear/0.1-SNAPSHOT/ear-0.1-SNAPSHOT.ear
+jenkins_build_ear: /var/lib/jenkins/jobs/build/lastSuccessful/cicd.sandbox\$ear/archive/cicd.sandbox/ear/0.1-SNAPSHOT/ear-0.1-SNAPSHOT.ear
