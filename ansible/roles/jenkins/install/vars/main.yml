@@ -7,3 +7,5 @@ package_name: jenkins
 jenkins_port: 28080
 jenkins_user: root
 jenkins_home: /var/lib/jenkins
+jenkins_data_archive: jenkins_data.tar.gz
+jenkins_data_archive_fragments: "{{ jenkins_data_archive }}.*"

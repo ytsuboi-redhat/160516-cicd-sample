@@ -1,0 +1,4 @@
+# file: roles/jboss-eap/copy/vars/main.yml
+
+eap_archive: jboss-eap-7.0.0.zip
+destination: /tmp

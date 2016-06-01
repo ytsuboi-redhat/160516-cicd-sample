@@ -1,13 +1,19 @@
 # file: roles/jboss-eap/install/tasks/main.yml
 
+- name: create group
+  group: name={{ eap_group }}
+
+- name: create user
+  user: name={{ eap_user }} group={{ eap_group }}
+
 - name: create JBoss EAP Installation Directory
   file: path={{ eap_install_dir }} owner=root group=root state=directory
 
 - name: install unzip
   yum: name=unzip state=present
 
-- name: unarchive JBoss EAP Binary File
-  unarchive: src={{ eap_archive }} dest={{ eap_install_dir }}
+- name: unarchive JBoss EAP archive
+  unarchive: src="{{ eap_copied_dir }}/{{ eap_archive }}" dest={{ eap_install_dir }} copy=no
 
 - name: remove JBoss EAP Home Directory, if exists
   file: path={{ eap_home_dir }} state=absent
@@ -17,3 +23,24 @@
 
 - name: chown {{ eap_home_dir }}
   file: path={{ eap_home_dir }} owner={{ eap_user }} group={{ eap_group }} recurse=yes
+
+- name: set EAP_HOME in /etc/profile.d/jboss-eap.sh
+  template: src=jboss-eap.sh dest=/etc/profile.d mode=u=rw,g=r,o=r
+
+- name: copy standalone.xml
+  template: src=standalone.xml dest={{ eap_home_dir }}/standalone/configuration
+
+- name: create PostgreSQL JDBC Driver module directory
+  file: path={{ eap_pgsql_module_dir }} owner={{ eap_user }} group={{ eap_group }} state=directory
+
+- name: copy PostgreSQL JDBC Driver jar
+  copy: src={{ eap_pgsql_jdbc_jar }} dest={{ eap_pgsql_module_dir }} owner={{ eap_user }} group={{ eap_group }}
+
+- name: create PostgreSQL JDBC Driver module xml
+  template: src=module.xml dest={{ eap_pgsql_module_dir }}
+
+- name: create JBoss EAP service configuration file
+  template: src=jboss-eap.conf dest=/etc/default
+
+- name: create JBoss EAP service startup script
+  template: src=jboss-eap-rhel.sh dest=/etc/init.d/jboss-eap mode=u+rwx,g=rx,o=rx

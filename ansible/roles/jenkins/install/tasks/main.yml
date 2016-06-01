@@ -19,8 +19,17 @@
 - name: set JENKINS_USER to root in /etc/sysconfig/jenkins
   replace: dest=/etc/sysconfig/jenkins regexp='^JENKINS_USER="jenkins"' replace='JENKINS_USER="{{ jenkins_user }}"' backup=no
 
-- name: copy jenkins dir
-  unarchive: src=jenkins_data.tar.gz dest=/var/lib
+- name: copy jenkins data dir archive fragments
+  copy: src={{ item }} dest=/tmp
+  with_items:
+    - "{{ jenkins_data_archive }}.aa"
+    - "{{ jenkins_data_archive }}.ab"
+
+- name: join fragments
+  command: sh -c "cat /tmp/{{ jenkins_data_archive_fragments }} > /tmp/{{ jenkins_data_archive }}"
+
+- name: unarchive jenkins data dir
+  unarchive: src="/tmp/{{ jenkins_data_archive }}" dest=/var/lib copy=no
 
 - name: start Jenkins
   service: name={{ package_name }} state=started

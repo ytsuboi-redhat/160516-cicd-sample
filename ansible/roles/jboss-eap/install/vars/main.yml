@@ -4,7 +4,8 @@ eap_user: jboss-eap
 eap_group: jboss-eap
 
 eap_version: 7.0.0.GA
-eap_install_dir: "/opt/jboss-eap"
+eap_copied_dir: /tmp
+eap_install_dir: /opt/jboss-eap
 eap_archive: jboss-eap-7.0.0.zip
 eap_extracted_dir: jboss-eap-7.0
 
