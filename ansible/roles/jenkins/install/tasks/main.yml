@@ -14,7 +14,13 @@
   yum: name={{ package_name }}
 
 - name: set JENKINS_PORT in /etc/sysconfig/jenkins
-  replace: dest=/etc/sysconfig/jenkins regexp='^JENKINS_PORT="8080"' replace='JENKINS_PORT="28080"' backup=yes
+  replace: dest=/etc/sysconfig/jenkins regexp='^JENKINS_PORT="8080"' replace='JENKINS_PORT="{{ jenkins_port }}"' backup=yes
 
-#- name: start Jenkins
-#  service: name={{ package_name }} state=started
+- name: set JENKINS_USER to root in /etc/sysconfig/jenkins
+  replace: dest=/etc/sysconfig/jenkins regexp='^JENKINS_USER="jenkins"' replace='JENKINS_USER="{{ jenkins_user }}"' backup=no
+
+- name: copy jenkins dir
+  unarchive: src=jenkins_data.tar.gz dest=/var/lib
+
+- name: start Jenkins
+  service: name={{ package_name }} state=started

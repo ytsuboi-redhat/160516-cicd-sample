@@ -1,0 +1,28 @@
+# file: roles/jmeter/install/tasks/main.yml
+
+- name: create Apache JMeter installation directory
+  file: path={{ jmeter_install_dir }} owner=root group=root state=directory
+
+- name: download Apache JMeter
+  get_url: url={{ jmeter_download_url }} dest={{ jmeter_install_dir }}
+
+- name: unarchive Apache JMeter binary file
+  unarchive: src="{{ jmeter_install_dir }}/{{ jmeter_archive }}" dest={{ jmeter_install_dir }} copy=no
+
+- name: remove Apache JMeter home directory, if exists
+  file: path={{ jmeter_home_dir }} state=absent
+
+- name: rename Apache JMeter home directory
+  command: mv chdir={{ jmeter_install_dir }} {{ jmeter_extracted_dir }} {{ jmeter_version }}
+
+- name: remove Apache JMeter binary file
+  file: path="{{ jmeter_install_dir }}/{{ jmeter_archive }}" state=absent
+
+- name: set JMETER_HOME in /etc/profile.d/jmeter.sh
+  template: src=jmeter.sh dest=/etc/profile.d mode=u=rw,g=r,o=r
+
+- name: create jmx to /tmp
+  template: src=performance.jmx dest=/tmp mode=u=rw,g=r,o=r
+
+- name: create dataset csv to /tmp
+  template: src=keys.csv dest=/tmp mode=u=rw,g=r,o=r

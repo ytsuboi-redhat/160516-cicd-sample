@@ -1,3 +1,4 @@
 # file: site.yml
- - include: eapservers.yml
- - include: dbservers.yml
+ - include: jenkinsservers.yml
+ # workaround for github restriction
+ - include: eapservers_init.yml

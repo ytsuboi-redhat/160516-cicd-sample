@@ -1,0 +1,14 @@
+# file: roles/jboss-eap/install/vars/main.yml
+
+eap_user: jboss-eap
+eap_group: jboss-eap
+
+eap_version: 7.0.0.GA
+eap_install_dir: "/opt/jboss-eap"
+eap_archive: jboss-eap-7.0.0.zip
+eap_extracted_dir: jboss-eap-7.0
+
+eap_home_dir: "{{ eap_install_dir }}/{{ eap_version }}"
+
+eap_pgsql_module_dir: "{{ eap_home_dir }}/modules/org/postgresql/main"
+eap_pgsql_jdbc_jar: postgresql-9.4.1208.jar

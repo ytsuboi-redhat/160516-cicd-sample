@@ -1,0 +1,10 @@
+# file: roles/ssh/keyset/tasks/main.yml
+
+- name: place id_rsa
+  copy: src=id_rsa dest=~/.ssh/ mode="u=rw,g-rwx,o-rwx"
+
+- name: place authorized_keys
+  copy: src=authorized_keys dest=~/.ssh/ mode="u=rw,g-rwx,o-rwx"
+
+- name: place known_hosts
+  copy: src=known_hosts dest=~/.ssh/ mode="u=rw,g=r,o=r"

@@ -1,0 +1,4 @@
+# file: roles/ansible/install/vars/main.yml
+
+repo_rpm_url: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+package_name: ansible

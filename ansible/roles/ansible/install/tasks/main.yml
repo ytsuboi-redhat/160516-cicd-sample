@@ -1,0 +1,10 @@
+# file: roles/ansible/install/tasks/main.yml
+
+- name: install epel-release
+  yum: name={{ repo_rpm_url }} state=present
+
+- name: install Ansible
+  yum: name={{ package_name }}
+
+- name: disable host key checking
+  replace: dest=/etc/ansible/ansible.cfg regexp='^#host_key_checking = False' replace='host_key_checking = False' backup=yes

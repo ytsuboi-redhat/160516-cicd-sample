@@ -1,0 +1,10 @@
+# file: eapservers.yml
+- hosts: eapservers
+  roles:
+    - { role: selinux/permissive, tags: ["selinux/permissive"] }
+    - { role: firewalld/stop, tags: ["firewalld/stop"] }
+    - { role: openjdk/install, tags: ["openjdk/install"] }
+    - { role: jboss-eap/stop, tags: ["jboss-eap/stop"] }
+    - { role: jboss-eap/install, tags: ["jboss-eap/install"] }
+    - { role: jboss-eap/init, tags: ["jboss-eap/init"] }
+    - { role: jboss-eap/start, tags: ["jboss-eap/start"] }

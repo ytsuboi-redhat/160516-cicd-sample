@@ -3,7 +3,10 @@
   roles:
     - { role: selinux/permissive, tags: ["selinux/permissive"] }
     - { role: firewalld/stop, tags: ["firewalld/stop"] }
+    - { role: ssh/keyset, tags: ["ssh/keyset"] }
     - { role: git/install, tags: ["git/install"] }
     - { role: openjdk/install, tags: ["openjdk/install"] }
     - { role: maven/install, tags: ["maven/install"] }
     - { role: jenkins/install, tags: ["jenkins/install"] }
+    - { role: ansible/install, tags: ["ansible/install"] }
+    - { role: jmeter/install, tags: ["jmeter/install"] }
