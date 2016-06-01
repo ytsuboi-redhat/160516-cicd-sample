@@ -5,7 +5,7 @@
   ignore_errors: True
 
 - name: remove Data directory if exists
-  shell: rm -rf /var/lib/pgsql/data
+  file: path=/var/lib/pgsql/data state=absent
 
 - name: install postgresql
   yum: name={{ item }}
@@ -33,6 +33,8 @@
     name: "{{ dbname }}"
     encoding: "UTF-8"
     login_user: postgres
+  become: True
+  become_user: postgres
 
 - name: create user
   postgresql_user:
@@ -42,3 +44,5 @@
     priv: ALL
     state: present
     login_user: postgres
+  become: True
+  become_user: postgres
