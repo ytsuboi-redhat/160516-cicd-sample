@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-30 10:38:42.985 UTC</timestamp>
+  <original>
+    <name>ビルド/cicd.sandbox:web</name>
+    <number>13</number>
+  </original>
+  <md5sum>e4871f588374bf86a51e9540393ece89</md5sum>
+  <fileName>cicd.sandbox:web-0.1-SNAPSHOT.war</fileName>
+  <usages>
+    <entry>
+      <string>ビルド/cicd.sandbox:ear</string>
+      <ranges>13</ranges>
+    </entry>
+    <entry>
+      <string>ビルド</string>
+      <ranges>13</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:web</string>
+      <ranges>13</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

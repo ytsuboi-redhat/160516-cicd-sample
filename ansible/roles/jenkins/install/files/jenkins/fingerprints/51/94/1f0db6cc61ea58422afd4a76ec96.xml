@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-30 10:12:15.117 UTC</timestamp>
+  <original>
+    <name>結合テスト/cicd.sandbox:service</name>
+    <number>18</number>
+  </original>
+  <md5sum>51941f0db6cc61ea58422afd4a76ec96</md5sum>
+  <fileName>cicd.sandbox:service:pom.xml</fileName>
+  <usages>
+    <entry>
+      <string>結合テスト/cicd.sandbox:service</string>
+      <ranges>18-23</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:service</string>
+      <ranges>11-15</ranges>
+    </entry>
+    <entry>
+      <string>ビルド</string>
+      <ranges>11-15</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト</string>
+      <ranges>18-23</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

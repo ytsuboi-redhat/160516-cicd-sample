@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-26 03:41:30.388 UTC</timestamp>
+  <original>
+    <name>ビルド/com.kddi.coe.cicd:ear</name>
+    <number>6</number>
+  </original>
+  <md5sum>129e21523a0903a6572af0d01fc27796</md5sum>
+  <fileName>com.kddi.coe.cicd:coe-1605-PoC-SNAPSHOT-dev.ear</fileName>
+  <usages>
+    <entry>
+      <string>ビルド</string>
+      <ranges>6</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/com.kddi.coe.cicd:ear</string>
+      <ranges>6</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

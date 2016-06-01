@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-30 10:03:07.833 UTC</timestamp>
+  <original>
+    <name>結合テスト/cicd.sandbox:dao</name>
+    <number>17</number>
+  </original>
+  <md5sum>425507956512e75c99e3af669985fd81</md5sum>
+  <fileName>cicd.sandbox:dao-0.1-SNAPSHOT.jar</fileName>
+  <usages>
+    <entry>
+      <string>結合テスト/cicd.sandbox:service</string>
+      <ranges>17</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/cicd.sandbox:web</string>
+      <ranges>17</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/cicd.sandbox:dao</string>
+      <ranges>17</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/cicd.sandbox:ear</string>
+      <ranges>17</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト</string>
+      <ranges>17</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

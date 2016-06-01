@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-25 13:17:30.208 UTC</timestamp>
+  <md5sum>31f1eb2e5b5f45597e9bdd9a97149ea2</md5sum>
+  <fileName>org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-api-maven-2.2.2.jar</fileName>
+  <usages>
+    <entry>
+      <string>ビルド/com.kddi.coe.cicd:web</string>
+      <ranges>1-7</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/cicd.sandbox:web</string>
+      <ranges>17-23</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:web</string>
+      <ranges>10-15</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト</string>
+      <ranges>1-8,10-23</ranges>
+    </entry>
+    <entry>
+      <string>ビルド</string>
+      <ranges>1-7,10-15</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/com.kddi.coe.cicd:service</string>
+      <ranges>1-7</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/cicd.sandbox:dao</string>
+      <ranges>17-23</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/cicd.sandbox:service</string>
+      <ranges>17-23</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:service</string>
+      <ranges>10-15</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:dao</string>
+      <ranges>10-15</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/com.kddi.coe.cicd:web</string>
+      <ranges>1-8,10-16</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/com.kddi.coe.cicd:service</string>
+      <ranges>1-8,10-16</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

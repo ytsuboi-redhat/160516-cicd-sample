@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-30 10:38:31.478 UTC</timestamp>
+  <original>
+    <name>ビルド/cicd.sandbox:service</name>
+    <number>13</number>
+  </original>
+  <md5sum>cfa0e26fff90622ebf4dc7b671c4b6d1</md5sum>
+  <fileName>cicd.sandbox:service-0.1-SNAPSHOT.jar</fileName>
+  <usages>
+    <entry>
+      <string>ビルド/cicd.sandbox:ear</string>
+      <ranges>13</ranges>
+    </entry>
+    <entry>
+      <string>ビルド</string>
+      <ranges>13</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:service</string>
+      <ranges>13</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:web</string>
+      <ranges>13</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

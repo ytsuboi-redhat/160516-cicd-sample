@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-30 09:57:00.265 UTC</timestamp>
+  <original>
+    <name>ビルド/cicd.sandbox:dao</name>
+    <number>10</number>
+  </original>
+  <md5sum>6b35d7dde46cc12251860044c7b0aa3f</md5sum>
+  <fileName>cicd.sandbox:dao:pom.xml</fileName>
+  <usages>
+    <entry>
+      <string>結合テスト/cicd.sandbox:dao</string>
+      <ranges>17</ranges>
+    </entry>
+    <entry>
+      <string>ビルド</string>
+      <ranges>10</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:dao</string>
+      <ranges>10</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト</string>
+      <ranges>17</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

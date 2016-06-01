@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-31 01:57:31.236 UTC</timestamp>
+  <original>
+    <name>ビルド/cicd.sandbox:ear</name>
+    <number>15</number>
+  </original>
+  <md5sum>88fd6524297b20292ad59b5292431c38</md5sum>
+  <fileName>cicd.sandbox:ear-0.1-SNAPSHOT.ear</fileName>
+  <usages>
+    <entry>
+      <string>ビルド/cicd.sandbox:ear</string>
+      <ranges>15</ranges>
+    </entry>
+    <entry>
+      <string>ビルド</string>
+      <ranges>15</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

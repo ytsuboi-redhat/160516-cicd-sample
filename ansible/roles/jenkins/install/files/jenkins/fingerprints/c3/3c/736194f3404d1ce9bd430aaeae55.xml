@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-25 13:17:30.963 UTC</timestamp>
+  <md5sum>c33c736194f3404d1ce9bd430aaeae55</md5sum>
+  <fileName>org.jboss.logging:jboss-logging-3.3.0.Final-redhat-1.jar</fileName>
+  <usages>
+    <entry>
+      <string>ビルド/com.kddi.coe.cicd:web</string>
+      <ranges>1-7</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/cicd.sandbox:web</string>
+      <ranges>17-23</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:web</string>
+      <ranges>10-15</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト</string>
+      <ranges>1-8,10-23</ranges>
+    </entry>
+    <entry>
+      <string>ビルド</string>
+      <ranges>1-7,10-15</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/cicd.sandbox:dao</string>
+      <ranges>17-23</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/cicd.sandbox:service</string>
+      <ranges>17-23</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/com.kddi.coe.cicd:web</string>
+      <ranges>1-8,10-16</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/com.kddi.coe.cicd:service</string>
+      <ranges>1-8,10-16</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

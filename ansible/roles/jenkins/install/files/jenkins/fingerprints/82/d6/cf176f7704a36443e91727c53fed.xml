@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-26 01:55:34.164 UTC</timestamp>
+  <original>
+    <name>結合テスト/com.kddi.coe.cicd:ear</name>
+    <number>2</number>
+  </original>
+  <md5sum>82d6cf176f7704a36443e91727c53fed</md5sum>
+  <fileName>com.kddi.coe.cicd:coe-1605-PoC-SNAPSHOT-dev.ear</fileName>
+  <usages>
+    <entry>
+      <string>結合テスト/com.kddi.coe.cicd:ear</string>
+      <ranges>2</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト</string>
+      <ranges>2</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

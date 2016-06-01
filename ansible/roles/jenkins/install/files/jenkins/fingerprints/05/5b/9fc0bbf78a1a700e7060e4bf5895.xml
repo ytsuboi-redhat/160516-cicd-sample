@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-31 02:02:19.678 UTC</timestamp>
+  <original>
+    <name>結合テスト/cicd.sandbox:web</name>
+    <number>23</number>
+  </original>
+  <md5sum>055b9fc0bbf78a1a700e7060e4bf5895</md5sum>
+  <fileName>cicd.sandbox:web-0.1-SNAPSHOT.war</fileName>
+  <usages>
+    <entry>
+      <string>結合テスト/cicd.sandbox:web</string>
+      <ranges>23</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト/cicd.sandbox:ear</string>
+      <ranges>23</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト</string>
+      <ranges>23</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

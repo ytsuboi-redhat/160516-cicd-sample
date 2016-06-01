@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-30 10:19:59.331 UTC</timestamp>
+  <original>
+    <name>結合テスト/cicd.sandbox:ear</name>
+    <number>19</number>
+  </original>
+  <md5sum>4484257e47b4d4fa5367f8ad1411b5c0</md5sum>
+  <fileName>cicd.sandbox:ear-0.1-SNAPSHOT.ear</fileName>
+  <usages>
+    <entry>
+      <string>結合テスト/cicd.sandbox:ear</string>
+      <ranges>19</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト</string>
+      <ranges>19</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

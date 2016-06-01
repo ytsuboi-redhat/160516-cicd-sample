@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-31 01:56:41.207 UTC</timestamp>
+  <original>
+    <name>ビルド/cicd.sandbox:web</name>
+    <number>14</number>
+  </original>
+  <md5sum>bd1ede37fbc120bcba9f22ec85064fc0</md5sum>
+  <fileName>cicd.sandbox:web:pom.xml</fileName>
+  <usages>
+    <entry>
+      <string>結合テスト/cicd.sandbox:web</string>
+      <ranges>22-23</ranges>
+    </entry>
+    <entry>
+      <string>ビルド</string>
+      <ranges>14-15</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:web</string>
+      <ranges>14-15</ranges>
+    </entry>
+    <entry>
+      <string>結合テスト</string>
+      <ranges>22-23</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-30 09:57:00.251 UTC</timestamp>
+  <original>
+    <name>ビルド/cicd.sandbox:dao</name>
+    <number>10</number>
+  </original>
+  <md5sum>c27fae2c52b50334ebae5f68735dbf89</md5sum>
+  <fileName>cicd.sandbox:dao-0.1-SNAPSHOT.jar</fileName>
+  <usages>
+    <entry>
+      <string>ビルド/cicd.sandbox:ear</string>
+      <ranges>10</ranges>
+    </entry>
+    <entry>
+      <string>ビルド</string>
+      <ranges>10</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:service</string>
+      <ranges>10</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:web</string>
+      <ranges>10</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:dao</string>
+      <ranges>10</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

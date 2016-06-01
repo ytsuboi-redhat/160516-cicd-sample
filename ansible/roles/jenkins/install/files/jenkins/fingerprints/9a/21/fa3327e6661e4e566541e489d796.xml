@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-31 01:56:59.356 UTC</timestamp>
+  <original>
+    <name>ビルド/cicd.sandbox:entity</name>
+    <number>15</number>
+  </original>
+  <md5sum>9a21fa3327e6661e4e566541e489d796</md5sum>
+  <fileName>cicd.sandbox:entity-0.1-SNAPSHOT.jar</fileName>
+  <usages>
+    <entry>
+      <string>ビルド/cicd.sandbox:ear</string>
+      <ranges>15</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:entity</string>
+      <ranges>15</ranges>
+    </entry>
+    <entry>
+      <string>ビルド</string>
+      <ranges>15</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:service</string>
+      <ranges>15</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:web</string>
+      <ranges>15</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/cicd.sandbox:dao</string>
+      <ranges>15</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2016-05-26 01:53:40.301 UTC</timestamp>
+  <original>
+    <name>ビルド/com.kddi.coe.cicd:web</name>
+    <number>2</number>
+  </original>
+  <md5sum>3405d99b6475c3372e3aee0389221ab4</md5sum>
+  <fileName>com.kddi.coe.cicd:web-1605-PoC-SNAPSHOT.war</fileName>
+  <usages>
+    <entry>
+      <string>ビルド</string>
+      <ranges>2</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/com.kddi.coe.cicd:web</string>
+      <ranges>2</ranges>
+    </entry>
+    <entry>
+      <string>ビルド/com.kddi.coe.cicd:ear</string>
+      <ranges>2</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>
