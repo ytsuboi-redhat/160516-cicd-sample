@@ -28,6 +28,9 @@
 - name: join fragments
   command: sh -c "cat /tmp/{{ jenkins_data_archive_fragments }} > /tmp/{{ jenkins_data_archive }}"
 
+- name: delete /var/lib/jenkins
+  file: path=/var/lib/jenkins state=absent
+
 - name: unarchive jenkins data dir
   unarchive: src="/tmp/{{ jenkins_data_archive }}" dest=/var/lib copy=no
 
