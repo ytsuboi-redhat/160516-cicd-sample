@@ -2,3 +2,5 @@
 - hosts: eapservers
   roles:
     - { role: jboss-eap/deploy, tags: ["jboss-eap/deploy"] }
+    - { role: jboss-eap/stop, tags: ["jboss-eap/stop"] }
+    - { role: jboss-eap/start, tags: ["jboss-eap/start"] }
